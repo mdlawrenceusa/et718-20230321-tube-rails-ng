@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Video title:</strong>
+  <%= @video.video_title %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @video.video_url %>
+</p>
+
+<p>
+  <strong>Video description:</strong>
+  <%= @video.video_description %>
+</p>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<div class="card-body">
+						<div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="<%= @video.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<h5 class="card-title"><%= @video.video_title %></h5>
+						<p class="card-text"><%= @video.video_description %></p>
+						<span class="play-icon"><i class="fa fa-play-circle-o"></i></span>
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+
+
+
+
+
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
